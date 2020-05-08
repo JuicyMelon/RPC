@@ -1,0 +1,107 @@
+img {
+    width: 133px;
+    height: 217px;
+}
+
+#instructions {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: center;;
+    height: 8vh;
+}
+html, body {
+    height: 100vh;
+    font-family: Roboto, sans-serif;
+}
+
+p {
+    width: 40vh;
+    text-align: center;
+}
+
+
+#button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+h1 {
+    position: absolute;
+    top: 0px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+button {
+    margin-right: 10px;
+    -webkit-appearance: none;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #FF5D3A;
+    border: 1px solid transparent;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: white !important;
+    border: 1px solid #FF5D3A !important;
+    color: #FF5D3A !important;
+    outline: none !important;
+}
+
+
+
+
+
+#comp, #player {
+    --viewmargin: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#comp {
+    margin-right: var(--viewmargin);
+}
+
+#player {
+    margin-left: var(--viewmargin);
+}
+
+#player {
+    float: left;
+}
+
+#comp {
+    float: right;
+}
+
+#compScore, #playerScore {
+    font-size: 50px;
+}
+
+h3 {
+    padding: 10px;
+    margin: 0;
+}
+
+#text {
+    display: block;
+    margin: auto;
+}
+
+#result-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}

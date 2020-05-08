@@ -1,108 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>
-            function computerPlay()
-            {
-                let randomizer = Math.floor(Math.random() * 3);
-                if(randomizer === 0)
-                {
-                    return "Rock";
-                }
-                else if(randomizer === 1)
-                {
-                    return "Paper";
-                }
-                else
-                {
-                    return "Scissors";
-                }
-            }
-
-            function playRound(playerSelection, computerSelection)
-            {
-                playerSelection = playerSelection.toLowerCase();
-                computerSelection = computerSelection.toLowerCase();
-                if(playerSelection == "rock")
-                {
-                    if(computerSelection == "rock")
-                    {
-                        return "It's a tie!";
-                    }
-                    else if(computerSelection == "paper")
-                    {
-                        return "You lose! paper beats rock";
-                    }
-                    else
-                    {
-                        return "You win! rock beats scissors!";
-                    }
-                }
-                else if(playerSelection == "paper")
-                {
-                    if(computerSelection == "paper")
-                    {
-                        return "It's a tie!";
-                    }
-                    else if(computerSelection == "rock")
-                    {
-                        return "You win! paper beats rock";
-                    }
-                    else
-                    {
-                        return "You lose! scissors beat paper!";
-                    }
-                }
-                else
-                {
-                    if(computerSelection == "paper")
-                    {
-                        return "You win! scissors beat paper!";
-                    }
-                    else if(computerSelection == "rock")
-                    {
-                        return "You lose! rock beats scissors"
-                    }
-                    else
-                    {
-                        return "It's a tie!";
-                    }
-                }
-            }
-
-            function game() 
-            {
-                let computerPoints = 0;
-                let playerPoints = 0;
-                for(let i = 0; i < 5; i++)
-                {
-                    let playerSelection = prompt("Whats your move?");
-                    let computerSelection = computerPlay();
-                    let results = playRound(playerSelection, computerSelection);
-                    console.log(results);
-                    if(results.indexOf("You win") != -1)
-                    {
-                        playerPoints++;
-                    }
-                    else if(results.indexOf("You lose") != -1)
-                    {
-                        computerPoints++;
-                    }
-                }
-                if(computerPoints < playerPoints)
-                {
-                    console.log(`You win with ${playerPoints} points, whereas the computer had ${computerPoints} points`);
-                }
-                else if(computerPoints > playerPoints)
-                {
-                    console.log(`You lose with ${playerPoints} points, whereas the computer had ${computerPoints} points`);
-                }
-                else
-                {
-                    console.log(`It was a tie! You had ${playerPoints} points, whereas the computer had ${computerPoints} points`);
-                }
-            }
-            console.log(game());
-        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="main.css" type="text/css" rel="stylesheet">
+        <title>Rock Paper Scissors</title>
     </head>
+    <body>
+
+
+            <div id="comp">
+                <h3>Computer Score:</h3>
+                <h3 id="compScore">0</h3>
+                <h3>Computer Move: </h3>
+            </div>
+            <div id="player">
+                <h3>Player Score:</h3>
+                <h3 id="playerScore">0</h3>
+                <h3>Your Move: </h3>
+            </div>     
+        <div id="result-group">
+            <h1>Welcome to Rock, Paper, Scissors</h1>
+            <div id="button-group">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissors">Scissors</button>
+                <button id="newGame">Start Game</button>
+            </div>
+            <h3>Instructions</h3>
+            <p>press start game to start the game, and new game to reset. After someone reaches 5 points, a winner will be declared.</p>
+            <h3 id="results">Results: </h3>
+            <p id="text"></p>
+            <h3>Events: </h3>
+            <p id="event"></p>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
 </html>
